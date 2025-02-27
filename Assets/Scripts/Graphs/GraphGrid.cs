@@ -34,7 +34,7 @@ namespace UCM.IAV.Navegacion
         public GameObject obstaclePrefab;
 
         public string mapsDir = "Maps"; // Directorio por defecto
-        public string mapName = "10x10.map"; // Fichero por defecto
+        public string mapName = "10x10.txt"; // Fichero por defecto
         public bool get8Vicinity = false;
         public float cellSize = 1f;
         [Range(0, Mathf.Infinity)]
@@ -47,7 +47,8 @@ namespace UCM.IAV.Navegacion
 
         private void Awake()
         {
-            mapName = GameManager.instance.getSize() + ".map";
+            // Cuando tenemos los mapas en la carpeta Resource, Unity nos exige que la extensión sea TXT si son texto
+            mapName = GameManager.instance.getSize() + ".txt";
         }
 
         private int GridToId(int x, int y)
@@ -65,13 +66,14 @@ namespace UCM.IAV.Navegacion
 
         private void LoadMap(string filename)
         {
-            string path;
-            
-            path = Application.dataPath + "/" + mapsDir + "/" + filename;
-
+            // Quitamos la extensión al fichero
+            string path = Path.ChangeExtension(mapsDir + "/" + filename,null);
+            TextAsset mapAsset = Resources.Load<TextAsset>(path);
+          
             try
             {
-                StreamReader strmRdr = new StreamReader(path);
+                MemoryStream mStrm = new MemoryStream(mapAsset.bytes);
+                StreamReader strmRdr = new StreamReader(mStrm);
                 using (strmRdr)
                 {
                     int j = 0, i = 0, id = 0;

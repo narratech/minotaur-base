@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -749,6 +748,10 @@ MonoBehaviour:
     - m_Text: 20x20
       m_Image: {fileID: 0}
     - m_Text: 30x30
+      m_Image: {fileID: 0}
+    - m_Text: 60x60
+      m_Image: {fileID: 0}
+    - m_Text: 100x100
       m_Image: {fileID: 0}
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2785,7 +2788,11 @@ MonoBehaviour:
       m_Image: {fileID: 0}
     - m_Text: 2
       m_Image: {fileID: 0}
-    - m_Text: 5
+    - m_Text: 3
+      m_Image: {fileID: 0}
+    - m_Text: 6
+      m_Image: {fileID: 0}
+    - m_Text: 10
       m_Image: {fileID: 0}
     - m_Text: 0
       m_Image: {fileID: 0}
