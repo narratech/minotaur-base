@@ -2,7 +2,7 @@
    Copyright (C) 2020-2023 Federico Peinado
    http://www.federicopeinado.com
    Este fichero forma parte del material de la asignatura Inteligencia Artificial para Videojuegos.
-   Esta asignatura se imparte en la Facultad de Informática de la Universidad Complutense de Madrid (España).
+   Esta asignatura se imparte en la Facultad de Informï¿½tica de la Universidad Complutense de Madrid (Espaï¿½a).
    Autor: Federico Peinado 
    Contacto: email@federicopeinado.com
 */
@@ -10,11 +10,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Animator))]
 public class PlayerAnimator : MonoBehaviour
 {
 
     Animator animator;
-    Rigidbody rigidbody;
+    new Rigidbody rigidbody; // Usar 'new' para ocultar el miembro heredado... se supone que es algo obsoleto pero que sigue heredando MonoBehavior de Component, o algo asÃ­
+
     // Start is called before the first frame update
     void Start()
     {

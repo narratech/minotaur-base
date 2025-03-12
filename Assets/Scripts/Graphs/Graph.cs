@@ -19,16 +19,16 @@ namespace UCM.IAV.Navegacion
     public abstract class Graph : MonoBehaviour
     {
         // Aquí el grafo entero es representado con estas listas, que luego puede aprovechar el algoritmo A*.
-        // El pseudocódigo de Millington no asume que tengamos toda la información del grafo representada y por eso va guardando registros de los nodos que visita.
+        // El pseudocódigo de Millington no asume que tengamos toda la información del grafo representada y por eso va guardando registros de los nodos que visita... pero si nos es posible, OPCIONALMENTE podemos usar estas variables como una CACHÉ donde tener toda la información
         public GameObject vertexPrefab;
         protected List<Vertex> vertices;
         protected List<List<Vertex>> neighbourVertex;
         protected List<List<float>> costs;
         protected bool[,] mapVertices;
-        protected float[,] costsVertices;
+        protected float[,] costsVertices; // Costes reales (g)... aunque también se podría crear una clase para las conexiones y poner los costes ahí, como en el pseudocódigo de Millington. Esto está 'optimizado' porque sabemos que trabajamos con una rejilla...
         protected int numCols, numRows;
 
-        // this is for informed search like A*
+        // Esto de la heurística es para algoritmos de búsqueda con estrategias informadas como A*, naturalmente.
         // Un delegado especifica la cabecera de una función, la que sea, que cumpla con esos parámetros y devuelva ese tipo.
         // Cuidado al implementarlas, porque no puede ser que la distancia -por ejemplo- entre dos casillas tenga una heurística más cara que el coste real de navegar de una a otra.
         public delegate float Heuristic(Vertex a, Vertex b);

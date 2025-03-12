@@ -37,7 +37,8 @@ namespace UCM.IAV.Movimiento
         float m_lastFramerate = 0.0f;
         float m_refreshTime = 0.5f;
 
-        private bool cameraPerspective = true;
+        // No recuerdo para que puse este atributo...
+        //private bool cameraPerspective = true;
 
         GameObject player = null;
         GameObject exitSlab = null;
