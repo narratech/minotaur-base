@@ -12,6 +12,8 @@ using System.Linq;
 
 /// <summary>
 /// Un montículo binario, ¡útil para ordenar datos e implementar colas de prioridad!
+/// Si tienes Unity configurado para usar Visual Studio Code, prepara el proyecto para usar .NET 6 y por lo tanto tendrás disponible el tipo PriorityQueue y no necesitarás esto.
+/// Pero si en los laboratorios tienes Unity configurado para funcionar con Visual Studio 2022, el proyecto todavía usa el .NET 4/5 viejo y no tendrás disponible PriorityQueue.
 /// </summary>
 /// <typeparam name="T"><![CDATA[IComparable<T> type of item in the heap]]>.</typeparam>
 public class BinaryHeap<T> : ICollection<T> where T : IComparable<T>

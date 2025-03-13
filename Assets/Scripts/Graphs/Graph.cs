@@ -105,6 +105,8 @@ namespace UCM.IAV.Navegacion
         public List<Vertex> GetPathAstar(GameObject srcO, GameObject dstO, Heuristic h = null)
         {
             // IMPLEMENTAR ALGORITMO A*
+            // Teniendo .NET 6 activo, puedes usar la cola de prioridad que viene por defecto en C# y no necesitas usar BinaryHeap
+            // PriorityQueue <Vertex> open = new PriorityQueue<Vertex>();
             return new List<Vertex>();
         }
 

@@ -161,6 +161,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.DefaultCompany.Navegacion
     Standalone: com.DefaultCompany.Navegacion
   buildNumber:
     Standalone: 0
@@ -889,7 +890,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: Navegacion
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -897,7 +898,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: Navegacion
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: Navegacion
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
