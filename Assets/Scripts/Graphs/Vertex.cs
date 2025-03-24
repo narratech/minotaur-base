@@ -26,12 +26,15 @@ namespace UCM.IAV.Navegacion
         /// </summary>
         public float cost;
 
+        // Para comparar registros de nodos, comparo el coste
+        // Ojo, esto incumple la convención de que si dos objetos son equals, el compareto debe devolver un cero... hay que revisar esto!
         public int CompareTo(Vertex other)
         {
             float result = this.cost - other.cost;
             return (int)(Mathf.Sign(result) * Mathf.Ceil(Mathf.Abs(result)));
         }
 
+        // Si dos registros de nodos tienen el mismo ID, son el mismo registro (es un poco peligroso, pero estoy asumiendo que no habrá repeticiones...)
         public bool Equals(Vertex other)
         {
             return (other.id == this.id);
