@@ -166,7 +166,7 @@ Hereda de comportamientoAgente y es usado por los minotauros patrulleros cuando 
 * __raycastCollision()__ detecta si hay algún obstáculo en la dirección en la que nos estamos moviendo. Si encuentra algún obstáculo, calcula la normal con la que ha impactado el rayo del raycast para desviar al agente en esa dirección y devolver ese vector de desviación. Este método es llamado desde el método __avoidance()__, llamado a su vez desde __getDirección()__.
 
 ### Merodear
-Otro comportamientoAgente, usado por los minotauros estáticos, simplemente deambulando por el mismo espacio.
+Otro comportamientoAgente, usado por los minotauros móviles, simplemente para dar vueltas por el laberinto.
 * __getDirection()__ simplemente calcula una velocidad aleatoria para que se muevan en ella durante un tiempo aleatorio también.
 * __onCollisionEnter()__, llamado automáticamente cuando colisionan con algo, les redirige en dirección opuesta del objeto con el que han colisionado.
 
